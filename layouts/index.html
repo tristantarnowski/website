@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ with .Content }}
+<header>
+    {{.}}
+</header>
+{{ end }}
+
+{{ range $page := .Site.RegularPages }}
+
+<div class="card">
+    <a href="{{ .Permalink }}">
+        {{ if $page.Params.featuredImage }}
+        <div style="--featured-image-url:url({{ $page.Permalink }}{{ $page.Params.featuredImage }});" class="featured-image">
+            {{ else }}
+            <div class="no-featured-image">
+                {{ end }}
+
+                <h2>{{ .Title }}</h2>
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+                <p>{{ .Summary }}</p>
+            </div>
+    </a>
+</div>
+{{ end }}
+
+{{ end }}

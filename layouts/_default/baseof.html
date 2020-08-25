@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manuale&family=Suez+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="{{ .Site.Home.Permalink }}">Home</a>
+            {{ range sort .Site.Sections "Title" }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+        © {{ now.Format "2006" }} Tristan Tarnowski - Created with <a href="https://gohugo.io/">Hugo</a>
+    </footer>
+</body>
+
+</html>

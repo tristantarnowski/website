@@ -1,0 +1,161 @@
+:root {
+    --main-bg-color: rgb(247, 247, 247);
+    /* --main-bg-color: white; */
+    --main-accent-color: #a0a0a0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Manuale";
+    overflow-y: scroll;
+    background: var(--main-bg-color);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 0 1rem;
+}
+
+main header {
+    margin: 2rem 0;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-bg-color);
+    border-bottom: 1px solid var(--main-accent-color);
+    padding: 1rem;
+}
+
+.site-header a {
+    margin-right: 1rem;
+    padding: 1rem 0;
+    color: black;
+}
+
+.site-header a:hover {
+    color: var(--main-accent-color);
+    text-decoration: none;
+}
+
+.site-footer {
+    flex-shrink: 0;
+    background-color: var(--main-bg-color);
+    border-top: 1px solid var(--main-accent-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+article figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Suez One";
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+article img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #228fca;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+article ul {
+    margin: 1rem;
+    list-style: inside disc;
+}
+
+article ol {
+    margin: 1rem;
+    list-style-position: inside;
+}
+
+article>*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(header) {
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th {
+    padding: 0.5rem 1rem;
+}
+
+td {
+    padding: 0.1rem 1rem;
+}
+
+tbody tr {
+    border-top: 1px solid var(--main-accent-color);
+}
+
+.featured-image {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to right, var(--main-bg-color) 25%, 75%, transparent), var(--featured-image-url);
+}
+
+.no-featured-image {
+    background-image: linear-gradient(to right, var(--main-bg-color) 25%, var(--main-accent-color) 200%);
+}
+
+.card {
+    text-decoration: none;
+    margin: 1rem 0;
+}
+
+.card div {
+    padding: 1rem 0;
+}
+
+.card a {
+    color: black;
+}
+
+.card h2 {
+    max-width: 75%;
+}
+
+.card p {
+    width: 50%;
+}
+
+.highlight pre {
+    padding: 1rem;
+    overflow: auto;
+}
