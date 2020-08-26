@@ -159,3 +159,14 @@ tbody tr {
     padding: 1rem;
     overflow: auto;
 }
+
+hr {
+    border: none;
+    background-color: var(--main-accent-color);
+    height: 1px;
+}
+
+blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid var(--main-accent-color);
+}
