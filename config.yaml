@@ -5,4 +5,4 @@ summaryLength: 50
 
 markup:
   highlight:
-    style: friendly
+    noClasses: false
