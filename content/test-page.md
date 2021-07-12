@@ -3,7 +3,7 @@ title: "Test Page"
 date: 2070-01-01T00:00:00
 publishDate: 1970-01-01T00:00:00
 draft: true
-featuredImage:
+featuredImage: ../pcb.png
 ---
 
 This page contains all of the Markdown formatting elements from the [CommonMark help page](https://commonmark.org/help/). It can be used to check that everything is formatted as desired.
@@ -27,7 +27,7 @@ These items are in the same paragraph
 ###### H6
 
 ![Image with caption](https://dummyimage.com/1920x1080 "Image caption")
-![Image without caption](https://dummyimage.com/640x360)
+![Image without caption](https://dummyimage.com/256x256)
 ![Big image](https://dummyimage.com/3840x2160)
 
 > Block quote
@@ -41,6 +41,14 @@ These items are in the same paragraph
 1. Ordered list
 2. Item 2  
    1. Nested
+
+Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Magna eget est lorem ipsum dolor sit amet. Commodo viverra maecenas accumsan lacus.
+
+- **Spaced** Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras.
+
+- **Out** Velit dignissim sodales ut eu sem integer vitae. Ullamcorper malesuada proin libero nunc consequat interdum.
+
+- **List** Libero volutpat sed cras ornare. Mauris augue neque gravida in fermentum et sollicitudin. Aenean sed adipiscing diam donec. Quis auctor elit sed vulputate mi sit.
 
 Inline `code` block
 
@@ -68,11 +76,11 @@ end
 
 int main(int argc, char const *argv[])
 {
-	for (int i = 0; i < 10; i++>) {
-		std::cout << i << '\n';
+    for (int i = 0; i < 10; i++>) {
+        std::cout << i << '\n';
         std::cout << "This is a longer line of code" << '\n';
-	}
-	return 0;
+    }
+    return 0;
 }
 ```
 
@@ -80,6 +88,25 @@ int main(int argc, char const *argv[])
 x = -pi:0.01:pi;
 plot(x,cos(x));
 grid on
+```
+
+```python
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    print(x, y) 
+```
+
+```js
+if ((time < 10) && true) {
+  greeting = "Good morning";
+} else if ((time < 20) || false) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
 ```
 
 | Column 1 | Column 2 | Column 3 |

@@ -1,7 +1,7 @@
 baseURL: "https://tristantarnowski.github.io/"
 languageCode: en
 title: Tristan Tarnowski
-summaryLength: 50
+summaryLength: 30
 
 markup:
   highlight:
